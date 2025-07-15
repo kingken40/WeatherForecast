@@ -182,6 +182,11 @@
     .button {
         width: 100%;
     }
+
+    .buttonSpacing {
+        margin-top: 1; 
+    }
+
     
     .weatherCard {
         min-width: unset;

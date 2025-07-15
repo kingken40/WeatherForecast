@@ -1,5 +1,8 @@
 "use client";
+
+import BackButton from "./components/BackButton"; 
 import React, { useState } from 'react';
+import { useRouter } from "next/navigation";
 import styles from './page.module.css';
 
 const Home = () => {
@@ -53,19 +56,26 @@ const Home = () => {
           className={styles.input}
         />
       </div>
-      <button onClick={getWeather} className={styles.button}>
-        🔍 Get Weather
-      </button>
-      {error && <p className={styles.error}>{error}</p>}
-      {weather && (
+      <div className={styles.buttonGroup}>
+        <button onClick={getWeather} className={styles.button}>
+            🔍 Get Weather
+        </button>
+        {/* {" "} */}
+        &nbsp;&nbsp;
+        <BackButton />
+        </div>
+
+        {error && <p className={styles.error}>{error}</p>}
+        {weather && (
         <div className={styles.weatherCard}>
-          <h2 className={styles.weatherTitle}>📍 {weather.city}</h2>
-          <div className={styles.weatherInfo}>
+            <h2 className={styles.weatherTitle}>📍 {weather.city}</h2>
+            <div className={styles.weatherInfo}>
             <div className={styles.temperature}>🌡️ {Math.round(weather.temperatureF)}°F</div>
             <div className={styles.condition}>{weather.condition}</div>
-          </div>
+            </div>
         </div>
-      )}
+        )}
+
     </div>
   );
 };

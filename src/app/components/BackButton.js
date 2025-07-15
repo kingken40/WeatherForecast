@@ -1,17 +1,19 @@
-"use client";
+// --When site goes public, uncomment and link to works page on site
 
-import { useRouter } from "next/navigation";
-import styles from "../page.module.css"; 
+// "use client";
 
-export default function BackButton() {
-  const router = useRouter();
+// import { useRouter } from "next/navigation";
+// import styles from "../page.module.css"; // adjust path if needed
 
-  return (
-    <button
-      onClick={() => router.back()}
-      className={`${styles.button} ${styles.buttonSpacing}`}
-    >
-      🔙 Go Back
-    </button>
-  );
-}
+// export default function BackButton() {
+//   const router = useRouter();
+
+//   return (
+//     <button
+//       onClick={() => router.push("/Projects.html")}
+//       className={styles.button}
+//     >
+//       🔙 Projects Page
+//     </button>
+//   );
+// }

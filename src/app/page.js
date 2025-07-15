@@ -60,9 +60,8 @@ const Home = () => {
         <button onClick={getWeather} className={styles.button}>
             🔍 Get Weather
         </button>
-        {/* {" "} */}
-        &nbsp;&nbsp;
-        <BackButton />
+        {/* &nbsp;&nbsp;
+        <BackButton /> */}
         </div>
 
         {error && <p className={styles.error}>{error}</p>}
